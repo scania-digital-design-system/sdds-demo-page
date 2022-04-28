@@ -1,5 +1,69 @@
+@import '@scania/typography/dist/scss/mixins';
+@import '@scania/typography/dist/scss/tokens';
+@import '@scania/grid/dist/scss/grid.scss';
 
-h1 {
-    color: #f0f !important;
+.breadcrumbs-row {
+    margin-bottom: 32px;
 }
 
+.product-row {
+    margin-bottom: 42px;
+    position: relative;
+
+    > * {
+        width: 100%;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    h2 {
+        @include type-style('headline-04');
+        margin-bottom: 8px;
+    }
+
+    span {
+        display: block;
+
+        &.price {
+            @include type-style('headline-04');
+            margin-bottom: 32px;
+            color: var(--sdds-grey-600);
+        }
+        
+    }
+
+    button {
+        margin-bottom: 32px;
+    }
+
+    h3 {
+        @include type-style('headline-05');
+        margin-bottom: 8px;
+    }
+
+    p {
+        @include type-style('body-01');
+        margin-bottom: 48px;
+    }    
+}
+
+.toast-row {
+    margin-bottom: 50px;
+
+    .sdds-toast {
+
+        &.sdds-toast-success {
+            .sdds-toast-icon svg {
+                background: none;
+            }            
+        }
+    }
+}
+
+.related-row {
+    padding-bottom: 103px;
+}

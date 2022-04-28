@@ -1,13 +1,130 @@
-<div class="sdds-row">
-    <div class="sdds-col">
-        <h1>Welcome to landing page</h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+<div class="sdds-container">
+    <div class="sdds-row breadcrumbs-row">
+        <div class="sdds-col">
+            <div class="sdds-breadcrumb">
+                <div class="sdds-breadcrumb-item">
+                    <a href="#">Page 1</a>
+                </div>
+                <div class="sdds-breadcrumb-item">
+                    <a href="#">Page 2</a>
+                </div>
+                <div class="sdds-breadcrumb-item sdds-breadcrumb-item-current">
+                    <a aria-current="page">Page 3</a>
+                </div>
+            </div>
+        </div>        
     </div>
-    <div class="sdds-col">
-        <p>
-            Filler content to enable scrolling.
-        </p>
+
+    <div class="sdds-row product-row">
+        <div class="sdds-col-lg-8">
+            <img src="assets/product.jpg" alt="Product photo">
+        </div>
+        <div class="sdds-col-lg-4">
+            <h2>
+                Header text
+            </h2>
+            <span class="price">
+                2 490 kr
+            </span>
+
+            <button class="sdds-btn sdds-btn-primary sdds-btn-fullbleed">
+                Add to cart
+            </button>
+
+            <h3>Description</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+
+            <sdds-accordion>
+                <sdds-accordion-item header="Accordion item 1" affix="suffix" tabindex="1">
+                    This is the panel, which contains associated information with the header. Usually it contains text, set in the same size as the header. Lorem ipsum doler sit amet.
+                </sdds-accordion-item>
+               <sdds-accordion-item header="2..." affix="suffix" tabindex="2">
+                    This is the panel, which contains associated information with the header. Usually it contains text, set in the same size as the header. Lorem ipsum doler sit amet.
+                </sdds-accordion-item>
+                <sdds-accordion-item header="Shipping" affix="suffix" tabindex="3">
+                    This is the panel, which contains associated information with the header. Usually it contains text, set in the same size as the header. Lorem ipsum doler sit amet.
+                </sdds-accordion-item>
+            </sdds-accordion>
+
+        </div>
+    </div>
+
+    <div class="sdds-row toast-row">
+        <div class="sdds-col-lg-12">
+            <div class="sdds-toast sdds-toast-success">
+
+                <div class="sdds-toast-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3399 5.29838C17.5847 5.5417 17.5859 5.93743 17.3426 6.18226C15.1584 8.38 13.4113 10.1252 11.9348 11.5981C11.6665 11.8657 11.4072 12.1243 11.1558 12.375C10.0236 13.504 9.05319 14.4718 8.15192 15.3782C8.03478 15.496 7.87556 15.5623 7.70943 15.5625C7.5433 15.5627 7.38393 15.4967 7.26653 15.3792L2.67003 10.7776C2.42608 10.5334 2.4263 10.1377 2.67052 9.89373C2.91473 9.64979 3.31046 9.65001 3.5544 9.89422L7.708 14.0524C8.48651 13.2715 9.3241 12.4363 10.274 11.489C10.5251 11.2386 10.7841 10.9803 11.052 10.7131C12.5279 9.24089 14.2735 7.49705 16.456 5.3011C16.6993 5.05627 17.0951 5.05505 17.3399 5.29838Z" fill="#1DAB8B"/>
+                    </svg>
+                </div>
+            
+                <div class="sdds-toast-content">
+            
+                    <div class="sdds-toast-header">
+                        <span class="sdds-toast-headline">Item added to cart</span>
+                        <span class='sdds-toast-dismiss'></span>
+                    </div>
+            
+                    <div class="sdds-toast-body">
+                        <span class="sdds-toast-subheadline">Item X has been added to your cart</span>
+                        <a class="sdds-toast-link" href="#">View item</a>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sdds-row related-row">
+        <div class="sdds-col-lg-4">
+            <div class="sdds-card ">
+                <img class="sdds-card-img" src="assets/card3.jpg" alt="Card image">
+                <div class="sdds-card-header">
+                  <h6 class="sdds-card-headline">Header text</h6>
+                  <h6 class="sdds-card-sub-headline">Subheader text</h6>
+                </div>
+                
+                <div class="sdds-card-footer">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.224 16.4479C10.9799 16.6919 10.9799 17.0877 11.224 17.3317C11.4681 17.5758 11.8638 17.5758 12.1079 17.3317L18.289 11.1506C18.9236 10.516 18.9236 9.48709 18.289 8.85249L12.1079 2.67134C11.8638 2.42726 11.4681 2.42726 11.224 2.67134C10.9799 2.91542 10.9799 3.31115 11.224 3.55522L17.0454 9.37663L1.85986 9.37661C1.51469 9.37661 1.23486 9.65643 1.23486 10.0016C1.23486 10.3468 1.51468 10.6266 1.85986 10.6266L17.0452 10.6266L11.224 16.4479Z" fill="#0D0F13"/>
+                    </svg>                        
+                </div>
+            </div>
+        </div>
+
+        <div class="sdds-col-lg-4">
+            <div class="sdds-card ">
+                <img class="sdds-card-img" src="assets/card2.jpg" alt="Card image">
+                <div class="sdds-card-header">
+                  <h6 class="sdds-card-headline">Header text</h6>
+                  <h6 class="sdds-card-sub-headline">Subheader text</h6>
+                </div>
+                
+                <div class="sdds-card-footer">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.224 16.4479C10.9799 16.6919 10.9799 17.0877 11.224 17.3317C11.4681 17.5758 11.8638 17.5758 12.1079 17.3317L18.289 11.1506C18.9236 10.516 18.9236 9.48709 18.289 8.85249L12.1079 2.67134C11.8638 2.42726 11.4681 2.42726 11.224 2.67134C10.9799 2.91542 10.9799 3.31115 11.224 3.55522L17.0454 9.37663L1.85986 9.37661C1.51469 9.37661 1.23486 9.65643 1.23486 10.0016C1.23486 10.3468 1.51468 10.6266 1.85986 10.6266L17.0452 10.6266L11.224 16.4479Z" fill="#0D0F13"/>
+                    </svg>                        
+                </div>
+            </div>
+        </div>
+
+        <div class="sdds-col-lg-4">
+            <div class="sdds-card ">
+                <img class="sdds-card-img" src="assets/card1.jpg" alt="Card image">
+                <div class="sdds-card-header">
+                  <h6 class="sdds-card-headline">Header text</h6>
+                  <h6 class="sdds-card-sub-headline">Subheader text</h6>
+                </div>
+                
+                <div class="sdds-card-footer">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.224 16.4479C10.9799 16.6919 10.9799 17.0877 11.224 17.3317C11.4681 17.5758 11.8638 17.5758 12.1079 17.3317L18.289 11.1506C18.9236 10.516 18.9236 9.48709 18.289 8.85249L12.1079 2.67134C11.8638 2.42726 11.4681 2.42726 11.224 2.67134C10.9799 2.91542 10.9799 3.31115 11.224 3.55522L17.0454 9.37663L1.85986 9.37661C1.51469 9.37661 1.23486 9.65643 1.23486 10.0016C1.23486 10.3468 1.51468 10.6266 1.85986 10.6266L17.0452 10.6266L11.224 16.4479Z" fill="#0D0F13"/>
+                    </svg>                        
+                </div>
+            </div>
+        </div>
     </div>
 </div>

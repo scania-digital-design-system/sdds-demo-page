@@ -3,6 +3,11 @@
 
     .sdds-sidebar.side-menu {
         height: 100%;
+
+        .sdds-sidebar-mheader__close {
+            border: 0;
+            background-color: transparent;
+        }
     }
 }
 

@@ -11,9 +11,19 @@ import { MainContentComponent } from './main-content/main-content.component';*/
 })
 export class AppComponent {
   hideBanner = false
+  mobileMenuOpen = false
 
   constructor() {
 
+  }
+
+  handleEvent($event) {
+    console.log($event);
+    switch($event.type) {
+      case "showMobileMenu":
+        this.mobileMenuOpen = $event.value;
+      break;
+    }
   }
 
   onCloseBanner() {

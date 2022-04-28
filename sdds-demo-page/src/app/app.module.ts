@@ -24,4 +24,5 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
+
 export class AppModule { }

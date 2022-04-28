@@ -4,6 +4,9 @@
 
 :host {
     @include type-style('body-01');
+    overflow-x: hidden;
+    position: relative;
+    height: 100%;
 }
 
 main {

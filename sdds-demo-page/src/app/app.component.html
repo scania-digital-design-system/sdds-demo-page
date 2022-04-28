@@ -18,11 +18,11 @@
     <div (click)="onCloseBanner()" class="sdds-banner-close"></div>
 </div>  
 
-<demo-header></demo-header>
+<demo-header (eventFromHeader)="handleEvent($event)"></demo-header>
 
 <div class="sdds-push sdds-demo-container">
 
-    <demo-sidebar></demo-sidebar>
+    <demo-sidebar (eventFromSidebar)="handleEvent($event)" [mobileMenuOpen]="mobileMenuOpen" ></demo-sidebar>
 
     <main-content>
         

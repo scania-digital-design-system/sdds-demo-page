@@ -1,6 +1,6 @@
-<div class="sdds-sidebar side-menu">
+<div [ngClass]="{'mobile-menu-open': mobileMenuOpen }" class="sdds-sidebar side-menu">
     <div class="sdds-sidebar-mheader">
-        <a href="#" class="sdds-sidebar-mheader__close">
+        <button (click)="this.closeMobileMenu()" href="#" class="sdds-sidebar-mheader__close">
             <svg
                 width="16"
                 height="16"
@@ -15,7 +15,7 @@
                     fill="#171719"
                 />
             </svg>
-        </a>
+        </button>
     </div>
 
     <ul class="sdds-sidebar-nav sdds-sidebar-nav--main">

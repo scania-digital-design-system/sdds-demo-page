@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { NavigationStart, Router } from '@angular/router';
 
 @Component({
@@ -7,6 +7,7 @@ import { NavigationStart, Router } from '@angular/router';
   styleUrls: ['./demo-sidebar.component.scss']
 })
 export class DemoSidebarComponent implements OnInit {
+  @Input() mobileMenuOpen = false;
   menuItems = [
     { label: "Item 1",
       route: "/page-1" 
@@ -21,8 +22,16 @@ export class DemoSidebarComponent implements OnInit {
       route: "/page-4" 
     },
   ];
+  @Output() eventFromSidebar = new EventEmitter<any>();
 
   constructor() { }
+
+  closeMobileMenu() {
+    this.eventFromSidebar.emit({
+      type: 'showMobileMenu',
+      value: false,
+    });
+  }
 
   ngOnInit(): void {
   }

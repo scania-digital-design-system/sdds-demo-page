@@ -1,0 +1,18 @@
+@import '@scania/typography/dist/scss/mixins';
+@import '@scania/typography/dist/scss/tokens';
+@import '@scania/grid/dist/scss/grid.scss';
+
+:host {
+    @include type-style('body-01');
+}
+
+main {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.sdds-banner {
+    &.hide-banner {
+        display: none;
+    }
+}

@@ -18,6 +18,11 @@
     "@angular/platform-browser": "~13.3.0",
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
+    "@scania/components": "^4.1.0",
+    "@scania/grid": "^2.0.1",
+    "@scania/icons": "^1.1.1",
+    "@scania/theme-light": "^4.3.0",
+    "@scania/typography": "^1.2.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

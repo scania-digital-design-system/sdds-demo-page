@@ -1,0 +1,41 @@
+nav {
+    background-color: var(--sdds-blue-900);
+
+    .sdds-nav__item {
+        background-color: var(--sdds-blue-900);
+        position: relative;
+        width: 64px;
+
+        &:hover {
+            background-color: var(--sdds-blue-800);
+        }
+
+        sdds-badges {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+        }
+
+        .user-avatar {
+            border-radius: 100%;
+        }
+
+        svg {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }    
+    }
+
+    &.sdds-nav .sdds-nav__mob-menu-btn {
+        display: none !important;
+    }
+    
+    @media (max-width: 800px) {
+        &.sdds-nav .sdds-nav__mob-menu-btn {
+            display: flex !important;
+        }
+    }
+}

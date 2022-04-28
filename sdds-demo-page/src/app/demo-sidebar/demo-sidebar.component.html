@@ -1,0 +1,40 @@
+<div class="sdds-sidebar side-menu">
+    <div class="sdds-sidebar-mheader">
+        <a href="#" class="sdds-sidebar-mheader__close">
+            <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M3.40338 2.34308C3.11048 2.05019 2.63561 2.05019 2.34272 2.34308C2.04982 2.63598 2.04982 3.11085 2.34272 3.40374L6.93897 8L2.34283 12.5961C2.04994 12.889 2.04994 13.3639 2.34283 13.6568C2.63572 13.9497 3.1106 13.9497 3.40349 13.6568L7.99963 9.06066L12.5958 13.6568C12.8887 13.9497 13.3635 13.9497 13.6564 13.6568C13.9493 13.3639 13.9493 12.889 13.6564 12.5961L9.06029 8L13.6565 3.40376C13.9494 3.11086 13.9494 2.63599 13.6565 2.3431C13.3636 2.0502 12.8888 2.0502 12.5959 2.3431L7.99963 6.93934L3.40338 2.34308Z"
+                    fill="#171719"
+                />
+            </svg>
+        </a>
+    </div>
+
+    <ul class="sdds-sidebar-nav sdds-sidebar-nav--main">
+        <ng-container *ngFor="let menuItem of menuItems; index as index">
+            <li class="sdds-sidebar-nav__item">
+                <a class="sdds-sidebar-nav__item-link" href="#" [routerLink]="menuItem.route" >
+                    <svg
+                        class="sdds-sidebar-nav__icon"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="#e2e2e4"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <rect y="0.334473" width="20" height="20" />
+                    </svg>
+                    <span class="sdds-sidebar-nav__item-text">{{ menuItem.label }}</span>
+                </a>
+            </li>    
+        </ng-container>        
+    </ul>  
+</div>

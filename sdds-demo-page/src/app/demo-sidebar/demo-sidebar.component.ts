@@ -9,18 +9,15 @@ import { NavigationStart, Router } from '@angular/router';
 export class DemoSidebarComponent implements OnInit {
   @Input() mobileMenuOpen = false;
   menuItems = [
-    { label: "Item 1",
-      route: "/page-1" 
+    { label: "Home",
+      route: "/home" 
     },
-    { label: "Item 2",
-      route: "/page-2" 
+    { label: "Cart",
+      route: "/cart" 
     },
-    { label: "Item 3",
-      route: "/page-3" 
-    },
-    { label: "Item 4",
-      route: "/page-4" 
-    },
+    { label: "Deliveries",
+      route: "/deliveries" 
+    },    
   ];
   @Output() eventFromSidebar = new EventEmitter<any>();
 

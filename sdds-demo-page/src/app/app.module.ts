@@ -7,6 +7,8 @@ import { DemoHeaderComponent } from './demo-header/demo-header.component';
 import { DemoSidebarComponent } from './demo-sidebar/demo-sidebar.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { CartPageComponent } from './cart-page/cart-page.component';
+import { DeliveriesPageComponent } from './deliveries-page/deliveries-page.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     DemoHeaderComponent,
     DemoSidebarComponent,
     MainContentComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    CartPageComponent,
+    DeliveriesPageComponent
   ],
   imports: [
     BrowserModule,

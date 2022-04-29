@@ -1,8 +1,8 @@
 @import '@scania/typography/dist/scss/mixins';
 @import '@scania/typography/dist/scss/tokens';
-@import '@scania/grid/dist/scss/grid.scss';
 
 :host {
+    background-color: var(--sdds-grey-50);
     @include type-style('body-01');
     overflow-x: hidden;
     position: relative;
@@ -12,6 +12,10 @@
 main {
     display: flex;
     flex-wrap: nowrap;
+}
+
+.sdds-container {
+    max-width: initial;
 }
 
 .sdds-banner {

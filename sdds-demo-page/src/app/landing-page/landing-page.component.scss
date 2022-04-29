@@ -2,6 +2,12 @@
 @import '@scania/typography/dist/scss/tokens';
 @import '@scania/grid/dist/scss/grid.scss';
 
+.sdds-container.landing-page {
+    background-color: #fff;
+    padding-top: 72px;
+}
+
+
 .breadcrumbs-row {
     margin-bottom: 32px;
 }
@@ -53,6 +59,11 @@
 
 .toast-row {
     margin-bottom: 50px;
+
+    > * {
+        display: flex;
+        justify-content: flex-end;
+    }
 
     .sdds-toast {
 

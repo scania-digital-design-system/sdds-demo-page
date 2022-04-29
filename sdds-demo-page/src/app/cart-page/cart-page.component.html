@@ -1,1 +1,160 @@
-<p>cart-page works!</p>
+<div class="sdds-container cart-page">
+    <div class="sdds-row">
+        <div class="sdds-col-md-7">
+            <h2>My Cart</h2>
+
+            <div class="sdds-row product-details-row">
+
+                <div class="sdds-col-md-5">
+                    <img src="assets/product.jpg" alt="Product photo">
+                </div>
+        
+                <div class="sdds-col-md-7 product-details-col">
+                    <svg class="close-button" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.68306 2.68306C2.92714 2.43898 3.32287 2.43898 3.56695 2.68306L10 9.11616L16.4331 2.68306C16.6772 2.43898 17.073 2.43898 17.317 2.68306C17.5611 2.92714 17.5611 3.32287 17.317 3.56695L10.8839 10L17.317 16.4331C17.5611 16.6772 17.5611 17.073 17.317 17.317C17.073 17.5611 16.6772 17.5611 16.4331 17.317L10 10.8839L3.56695 17.317C3.32287 17.5611 2.92714 17.5611 2.68306 17.317C2.43898 17.073 2.43898 16.6772 2.68306 16.4331L9.11616 10L2.68306 3.56695C2.43898 3.32287 2.43898 2.92714 2.68306 2.68306Z" fill="black"/>
+                    </svg>
+                        
+                    <h3>Header text</h3>
+        
+                    <span class="price">
+                        2 490 kr
+                    </span>
+        
+                    <h3>Lorem Ipsum</h3>
+        
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
+                    </p>
+        
+                    <span class="price-alt align-right">
+                        2 490 kr
+                    </span>
+                </div>
+
+                <div class="sdds-col-md-12 order-rows-row">
+                    <div class="order-row">
+                        <span>Lorem Ipsum</span>
+                        <span>0 kr</span>
+                    </div>
+        
+                    <div class="order-row">
+                        <span>Lorem Ipsum</span>
+                        <span style="color: #000" class="result">2 490 kr</span>
+                    </div>
+                </div>                
+            </div>
+        </div>
+
+        <div class="sdds-col-md-1">
+
+        </div>
+
+        <div class="sdds-col-md-4">
+            <h2>
+                Lorem Ipsum
+            </h2>
+
+            <h3>Delivery</h3>
+            <p>
+                To see all the countries we ship to
+                together with rates, click here.
+            </p>
+
+            <h3>Lorem Ipsum</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
+            </p>
+
+            <h3>Lorem Ipsum</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. 
+            </p>
+        </div>
+    </div>
+
+    <div class="sdds-row">
+        <div class="sdds-col-md-7">
+            <div class="form-part">
+                <h2>Details</h2>
+                
+                <div class="divider-line"></div>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                </p>
+            </div>
+
+            <div class="form-part">
+                <h3>Shipping options</h3>
+                <div class="sdds-radio-button-group">
+                    <div class="sdds-radio-item">
+                        <input class="sdds-form-input" type="radio" name="rb-example" id="rb-option-1">
+                        <label class="sdds-form-label" for="rb-option-1">
+                            Option 1
+                        </label>
+                    </div>
+                    <div class="sdds-radio-item">
+                        <input class="sdds-form-input" type="radio" name="rb-example" id="rb-option-2">
+                        <label class="sdds-form-label" for="rb-option-2">
+                            Option 2
+                        </label>
+                    </div>
+                    <div class="sdds-radio-item">
+                        <input class="sdds-form-input" type="radio" name="rb-example" id="rb-option-2">
+                        <label class="sdds-form-label" for="rb-option-2">
+                            Option 3
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-part">
+                <h3>Shipping address</h3>
+
+                <sdds-textfield type="text" placeholder="First name"></sdds-textfield>
+                <sdds-textfield type="text" placeholder="Last name"></sdds-textfield>
+                <sdds-textfield type="text" placeholder="Address"></sdds-textfield>
+                <div class="textfield-row">
+                    <sdds-textfield type="text" placeholder="Postal code"></sdds-textfield>
+                    <sdds-textfield type="text" placeholder="City"></sdds-textfield>
+                </div>
+                <sdds-dropdown placeholder="Country">
+                    <sdds-dropdown-option value="option-1">Sweden</sdds-dropdown-option>
+                    <sdds-dropdown-option value="option-2">Norway</sdds-dropdown-option>
+                    <sdds-dropdown-option value="option-3">India</sdds-dropdown-option>
+                </sdds-dropdown>
+            </div>
+
+            
+            <div class="form-part">
+                <h3>Card details</h3>
+                <div class="edit-button">
+                    <span>Edit</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7173 2.86221C13.2054 2.37405 13.9969 2.37405 14.4851 2.86221L17.1366 5.51376C17.6248 6.00192 17.6248 6.79338 17.1366 7.28154L8.5453 15.8729C8.39147 16.0267 8.20015 16.1378 7.99026 16.195L3.28944 17.4768C3.07306 17.5358 2.84166 17.4743 2.68307 17.3157C2.52448 17.1572 2.46303 16.9258 2.52203 16.7094L3.80389 12.0086C3.86112 11.7987 3.97214 11.6074 4.12597 11.4536L12.7173 2.86221ZM16.2527 6.39765L13.6012 3.74609L12.2754 5.07191L14.9269 7.72346L16.2527 6.39765ZM14.043 8.60735L11.3915 5.9558L5.00986 12.3375L4.01573 15.9831L7.66142 14.989L14.043 8.60735Z" fill="#0D0F13"/>
+                    </svg>
+                </div>
+                <sdds-textfield type="text" disabled placeholder="First name"></sdds-textfield>
+                <sdds-textfield type="text" disabled placeholder="Last name"></sdds-textfield>
+                <sdds-textfield type="text" disabled placeholder="Card no."></sdds-textfield>
+                <div class="textfield-row">
+                    <sdds-textfield type="text" disabled placeholder="Date"></sdds-textfield>
+                    <sdds-textfield type="text" disabled placeholder="CVV"></sdds-textfield>
+                </div>
+
+                <div class="sdds-checkbox-item">
+                    <input disabled class="sdds-form-input" type="checkbox" name="cb-example" id="cb-option-1">
+                     <label class="sdds-form-label" for="cb-option-1">
+                        Remember this card
+                     </label>
+                </div>
+
+                <button class="sdds-btn sdds-btn-primary sdds-btn-fullbleed">
+                    Add to cart
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+</div>

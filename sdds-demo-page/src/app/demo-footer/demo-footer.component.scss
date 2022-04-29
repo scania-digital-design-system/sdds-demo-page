@@ -1,0 +1,11 @@
+@import '@scania/typography/dist/scss/mixins';
+@import '@scania/typography/dist/scss/tokens';
+@import '@scania/grid/dist/scss/grid.scss';
+
+footer {
+    background-color: #fff;
+}
+
+.sdds-footer-top {
+    background-color: transparent;
+}

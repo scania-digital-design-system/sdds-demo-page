@@ -9,6 +9,7 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { DeliveriesPageComponent } from './deliveries-page/deliveries-page.component';
+import { DemoFooterComponent } from './demo-footer/demo-footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DeliveriesPageComponent } from './deliveries-page/deliveries-page.compo
     MainContentComponent,
     LandingPageComponent,
     CartPageComponent,
-    DeliveriesPageComponent
+    DeliveriesPageComponent,
+    DemoFooterComponent
   ],
   imports: [
     BrowserModule,

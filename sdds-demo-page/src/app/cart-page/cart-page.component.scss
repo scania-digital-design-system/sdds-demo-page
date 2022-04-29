@@ -3,7 +3,7 @@
 @import '@scania/grid/dist/scss/grid.scss';
 
 .sdds-container.cart-page {
-    background-color: #f8f9fa;
+    background-color: var(--sdds-grey-50);
     padding-top: 72px;
 }
 

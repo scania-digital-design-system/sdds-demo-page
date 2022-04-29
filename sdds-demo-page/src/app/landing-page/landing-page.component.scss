@@ -3,8 +3,8 @@
 @import '@scania/grid/dist/scss/grid.scss';
 
 .sdds-container.landing-page {
-    background-color: #fff;
-    padding-top: 72px;
+    background-color: var(--sdds-grey-50);
+    padding-top: 72px;    
 }
 
 

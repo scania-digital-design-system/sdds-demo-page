@@ -27,7 +27,7 @@
                 2 490 kr
             </span>
 
-            <button class="sdds-btn sdds-btn-primary sdds-btn-fullbleed">
+            <button (click)="this.addToCart()" class="sdds-btn sdds-btn-primary sdds-btn-fullbleed">
                 Add to cart
             </button>
 
@@ -37,10 +37,10 @@
             </p>
 
             <sdds-accordion>
-                <sdds-accordion-item header="Accordion item 1" affix="suffix" tabindex="1">
+                <sdds-accordion-item header="Product information" affix="suffix" tabindex="1">
                     This is the panel, which contains associated information with the header. Usually it contains text, set in the same size as the header. Lorem ipsum doler sit amet.
                 </sdds-accordion-item>
-               <sdds-accordion-item header="2..." affix="suffix" tabindex="2">
+               <sdds-accordion-item header="Details" affix="suffix" tabindex="2">
                     This is the panel, which contains associated information with the header. Usually it contains text, set in the same size as the header. Lorem ipsum doler sit amet.
                 </sdds-accordion-item>
                 <sdds-accordion-item header="Shipping" affix="suffix" tabindex="3">
@@ -51,7 +51,7 @@
         </div>
     </div>
 
-    <div class="sdds-row toast-row">
+    <div [ngClass]="{show: this.showToast}" class="sdds-row toast-row">
         <div class="sdds-col-md-12">
             <div class="sdds-toast sdds-toast-success">
 
@@ -65,7 +65,7 @@
             
                     <div class="sdds-toast-header">
                         <span class="sdds-toast-headline">Item added to cart</span>
-                        <span class='sdds-toast-dismiss'></span>
+                        <span (click)="this.closeToast()" class='sdds-toast-dismiss'></span>
                     </div>
             
                     <div class="sdds-toast-body">

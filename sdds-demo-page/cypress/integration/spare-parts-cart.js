@@ -26,39 +26,11 @@ function headerAssertions() {
 
 describe('spare parts shop demo page', () => {
   beforeEach(() => {
-    cy.visit('/')
+    cy.visit('/cart')
   })
-  context('Banner', () => {
-    it('links to Deliveries & returns', () => {
-      // Click banner link
-      cy.get('.sdds-banner a')
-        .should('contain', 'Deliveries & returns')
-        .click()
-      newPageAssertion('/deliveries', 'Deliveries & returns')
-      noActiveMenuItem()
-    })
-    it('closes when user clicks cross', () => {
-      cy.get('.sdds-banner-close')
-        .should('be.visible')
-        .click()
-      cy.get('.sdds-banner')
-        .should('not.be.visible')
-    })
-    it('stays closed when user goes to another page', () => {
-      cy.get('.sdds-banner-close')
-        .click()
-      cy.get(':nth-child(1) > .sdds-sidebar-nav__item-link')
-        .click()
-      cy.get('.sdds-banner')
-        .should('not.be.visible')
-    })
-  })
-  context('Item page', () => {
-    it('has a banner on top of page', () => {
-      cy.get('.sdds-banner').should('be.visible')
-    })
-
-    it('has a header with application name', () => {
+  
+  context('Page structura', () => {
+    it('has a header with features', () => {
       headerAssertions()
     })
 
@@ -70,7 +42,7 @@ describe('spare parts shop demo page', () => {
     })
 
     it.skip('top footer content', () => {
-      //Top footer features 4 sections, titled 'Title' with 5 links per section. ´
+      // Top footer features 4 sections, titled 'Title' with 5 links per section. ´
       // All links read 'Nothing' except link to 'Deliveries & returns'.
       cy.get('.sdds-footer-top').should('be.visible')
       cy.get('.sdds-footer-title').should('have.length', 4)
@@ -87,29 +59,56 @@ describe('spare parts shop demo page', () => {
       cy.get('.sdds-footer-main-brand')
         .should('have.css', 'background-image', 'url("https://cdn.digitaldesign.scania.com/logotype/1.0.0/scania_wordmark-white/scania-wordmark-white.svg")')
     })
-    it('has breadcrumbs', () => {
-      //Page has breadcrumbs of 3 levels
-      cy.get('.sdds-breadcrumb a')
-        .should('be.visible')
-        .should('have.length', 3)
-        .should('contain', 'Page 1')
-        .should('contain', 'Page 2')
-        .should('contain', 'Page 3')
-      cy.get('.sdds-breadcrumb-item').last().should('have.class', 'sdds-breadcrumb-item-current')
-    })
+    
   })
 
-  context('Add item to cart', () => {
-    it('add item to cart when clicking button', () => {
-      cy.get('[data-cy="add-to-cart"]').click()
-      cy.get('.cartsymbol > sdds-badges').should('have.value', 1)
+  context('My Cart page', () => {
+    it('has a link to Deliveries & returns', () => {
+      cy.visit('/cart')
+      // Target link
+      //newPageAssertion('/deliveries', 'Deliveries & returns')
+      //noActiveMenuItem()
     })
-    it('shows a toast when item is added to cart', () => {
-      cy.get('[data-cy="add-to-cart"]').should('be.visible').click()
-      cy.get('.sdds-toast').should('be.visible')
-      cy.get('.sdds-toast a').should('have.attr', 'href', '/deliveries')
-    })
-  })
 
+    it.only('form', () => {
+      cy.visit('/cart')
+
+      //cy.contains('Option 1').parent().find('input[type=radio]').check()
+      //cy.contains('Option 2').parent().find('input[type=radio]').check()
+      //cy.contains('Option 3').parent().find('input[type=radio]').check()
+
+      cy.get('#rb-option-1').check()
+      cy.get('#rb-option-2').check()
+      cy.get('#rb-option-3').check()
+
+      const firstName = 'Anna'
+      const lastName = 'Andersson'
+      const address = 'Södertäljevägen 3'
+      const zip = '123 45'
+      const city = 'Södertälje'
+      
+      // Must chain .shadow() when input element is a web component
+      cy.get('#shipping-first-name').shadow().find('[placeholder="First name"]').type(`${firstName}`, {force: true})
+      cy.get('#shipping-last-name').shadow().find('[placeholder="Last name"]').type(`${lastName}`, {force: true})
+      cy.get('#shipping-address').shadow().find('[placeholder="Address"]').type(`${address}`, {force: true})
+      cy.get('#shipping-zip').shadow().find('[placeholder="Postal code"]').type(`${zip}`, {force: true})
+      cy.get('#shipping-city').shadow().find('[placeholder="City"]').type(`${city}`, {force: true})
+      
+      // Dropdown element
+      cy.get('#shipping-country-2').click({force: true})
+      cy.get('#shipping-country').should('have.attr', 'selected-value', 'option-2')
+      cy.get('#shipping-country-1').click({force: true})
+      cy.get('#shipping-country').should('have.attr', 'selected-value', 'option-1')
+
+      cy.get('[data-cy="submit"]').click()
+    })
+    
+    it('form', () => {
+
+
+
+    })
+
+  })
 
 })

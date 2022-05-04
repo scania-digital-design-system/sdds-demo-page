@@ -19,6 +19,8 @@ main {
 }
 
 .sdds-banner {
+    background-color: var(--sdds-grey-300);
+
     &.hide-banner {
         display: none;
     }

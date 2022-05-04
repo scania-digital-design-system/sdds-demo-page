@@ -19,6 +19,7 @@
     "@angular/platform-browser": "~13.3.0",
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
+    "@ngrx/store": "^13.2.0",
     "@scania/components": "^4.1.0",
     "@scania/grid": "^2.0.1",
     "@scania/icons": "^1.1.1",

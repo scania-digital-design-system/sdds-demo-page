@@ -1,6 +1,6 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { StoreModule } from '@ngrx/store'; 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DemoHeaderComponent } from './demo-header/demo-header.component';
@@ -10,6 +10,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { DeliveriesPageComponent } from './deliveries-page/deliveries-page.component';
 import { DemoFooterComponent } from './demo-footer/demo-footer.component';
+
+import { CartReducer } from './store/reducers/cart.reducer';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,10 @@ import { DemoFooterComponent } from './demo-footer/demo-footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot({
+      cartItems: CartReducer,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -20,9 +20,10 @@
 
     <ul class="sdds-sidebar-nav sdds-sidebar-nav--main">
         <ng-container *ngFor="let menuItem of menuItems; index as index">
-            <li class="sdds-sidebar-nav__item">
+            <li routerLinkActive="sdds-item--active" class="sdds-sidebar-nav__item">
                 <a class="sdds-sidebar-nav__item-link" href="#" [routerLink]="menuItem.route" >
                     <svg
+                        style="display: none;"
                         class="sdds-sidebar-nav__icon"
                         width="20"
                         height="20"

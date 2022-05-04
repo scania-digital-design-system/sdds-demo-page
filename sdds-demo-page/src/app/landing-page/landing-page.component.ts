@@ -17,6 +17,11 @@ export class LandingPageComponent implements OnInit {
 
   addToCart(): void {
     this.showToast = true;
+    setTimeout(
+      () => {
+        this.showToast = false;
+      }, 5000
+    );
 
     this.store.dispatch(new AddItemAction(
       {

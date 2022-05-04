@@ -77,6 +77,9 @@
     }
 
     .sdds-toast {
+        position: fixed; 
+        right: 32px;
+        bottom: 32px;
 
         &.sdds-toast-success {
             .sdds-toast-icon svg {

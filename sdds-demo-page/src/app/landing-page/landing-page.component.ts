@@ -11,13 +11,9 @@ import { AppState } from '../store/models/state.model';
 export class LandingPageComponent implements OnInit {
   showToast = false
 
-  constructor(private store: Store<AppState>) {
-    console.log("landingPage constructor");
-  }
+  constructor(private store: Store<AppState>) { }
 
-  ngOnInit(): void {
-    console.log("landingPage ngOnInit");
-  }
+  ngOnInit(): void { }
 
   addToCart(): void {
     this.showToast = true;

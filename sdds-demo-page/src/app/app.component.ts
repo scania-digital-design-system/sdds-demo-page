@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 /* import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { CartItem } from './store/models/cartItem.model';
@@ -12,14 +13,17 @@ import { AppState } from './store/models/state.model';*/
 export class AppComponent implements OnInit {
   hideBanner = false
   mobileMenuOpen = false
-  // cartItems$: Observable<Array<CartItem>>;
 
-  constructor(/*private store: Store<AppState>*/) {
+  constructor(private router: Router) {
 
   }
 
   ngOnInit(): void {
-    // this.cartItems$ = this.store.select((store) => store.cartItems);
+    this.router.events.subscribe((evt) => {
+      if (evt instanceof NavigationEnd) {
+        window.scrollTo(0, 0);
+      }
+    });
   }
 
   handleEvent($event) {

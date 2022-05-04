@@ -1,7 +1,7 @@
 import { CartItem } from '../models/cartItem.model';
 import { CartAction, CartActionType } from '../actions/cart.action';
 
-const initialState: Array<CartItem> = [  
+const initialState: Array<CartItem> = [
 ];
 
 export function CartReducer(

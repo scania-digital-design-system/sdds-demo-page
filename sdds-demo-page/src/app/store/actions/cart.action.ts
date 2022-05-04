@@ -5,7 +5,6 @@ export enum CartActionType {
 }
 export class AddItemAction implements Action {
   readonly type = CartActionType.ADD_ITEM;
-  //add an optional payload
   constructor(public payload: CartItem) {}
 }
 export type CartAction = AddItemAction;

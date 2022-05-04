@@ -31,7 +31,6 @@ export class DemoHeaderComponent implements OnInit {
   ngOnInit() {
     this.store.select((store) => store.cartItems).subscribe(cartItems => {
       this.showBadge = cartItems.length > 0;
-      console.log(this.showBadge);
     });
   }
 

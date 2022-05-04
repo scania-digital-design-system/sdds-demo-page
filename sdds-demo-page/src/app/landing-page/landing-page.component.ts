@@ -18,15 +18,12 @@ export class LandingPageComponent implements OnInit {
   addToCart(): void {
     this.showToast = true;
 
-    console.log('dispatching shit to store');
-
     this.store.dispatch(new AddItemAction(
       {
         id: "1337",
         name: "Example item"
       }
     ));
-
   }
 
   closeToast(): void {

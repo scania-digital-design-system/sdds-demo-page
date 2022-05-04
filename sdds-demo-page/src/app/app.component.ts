@@ -27,7 +27,6 @@ export class AppComponent implements OnInit {
   }
 
   handleEvent($event) {
-    console.log($event);
     switch($event.type) {
       case "showMobileMenu":
         this.mobileMenuOpen = $event.value;

@@ -4,7 +4,7 @@
       <div class="sdds-row">
         
         <div class="sdds-footer-top-col sdds-col-max sdds-col-xxlg sdds-col-xlg sdds-col-lg sdds-col-md-12 sdds-col-sm-12 sdds-col-xs-12">
-          <div class="sdds-footer-title">
+          <div (click)="toggleFooterColumn(0); $event.stopPropagation();" [ngClass]="{'opened': this.toggle[1]}" class="sdds-footer-title">
             <span>Title</span>
             <button class="sdds-footer-top-icon">
               <svg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -12,17 +12,17 @@
               </svg>
             </button>
           </div>
-          <ul class="sdds-footer-main-links">
-              <li><a>Link</a></li>
-              <li><a>Link</a></li>
-              <li><a>Link</a></li>
-              <li><a>Link</a></li>
-              <li><a>Link</a></li>
+          <ul [ngClass]="{'opened': this.toggle[0]}" class="sdds-footer-main-links">
+              <li><a (click)="removeFocus($event);" [routerLink]="'/deliveries'">Deliveries & returns</a></li>
+              <li><a (click)="removeFocus($event);">Link</a></li>
+              <li><a (click)="removeFocus($event);">Link</a></li>
+              <li><a (click)="removeFocus($event);">Link</a></li>
+              <li><a (click)="removeFocus($event);">Link</a></li>
           </ul>
         </div>
   
         <div class="sdds-footer-top-col sdds-col-max sdds-col-xxlg sdds-col-xlg sdds-col-lg sdds-col-md-12 sdds-col-sm-12 sdds-col-xs-12">
-            <div class="sdds-footer-title">
+          <div (click)="toggleFooterColumn(1); $event.stopPropagation();" [ngClass]="{'opened': this.toggle[1]}" class="sdds-footer-title">
               <span>Title</span>
               <button class="sdds-footer-top-icon">
                 <svg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -30,17 +30,17 @@
                 </svg>
               </button>
             </div>
-            <ul class="sdds-footer-main-links">
-                <li><a>Link</a></li>
-                <li><a>Link</a></li>
-                <li><a>Link</a></li>
-                <li><a>Link</a></li>
-                <li><a>Link</a></li>
+            <ul [ngClass]="{'opened': this.toggle[1]}" class="sdds-footer-main-links">
+                <li><a (click)="removeFocus($event);">Link</a></li>
+                <li><a (click)="removeFocus($event);">Link</a></li>
+                <li><a (click)="removeFocus($event);">Link</a></li>
+                <li><a (click)="removeFocus($event);">Link</a></li>
+                <li><a (click)="removeFocus($event);">Link</a></li>
             </ul>
         </div>
 
         <div class="sdds-footer-top-col sdds-col-max sdds-col-xxlg sdds-col-xlg sdds-col-lg sdds-col-md-12 sdds-col-sm-12 sdds-col-xs-12">
-            <div class="sdds-footer-title">
+          <div (click)="toggleFooterColumn(2); $event.stopPropagation();" [ngClass]="{'opened': this.toggle[1]}" class="sdds-footer-title">
               <span>Title</span>
               <button class="sdds-footer-top-icon">
                 <svg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -48,17 +48,17 @@
                 </svg>
               </button>
             </div>
-            <ul class="sdds-footer-main-links">
-                <li><a>Link</a></li>
-                <li><a>Link</a></li>
-                <li><a>Link</a></li>
-                <li><a>Link</a></li>
-                <li><a>Link</a></li>
+            <ul [ngClass]="{'opened': this.toggle[2]}" class="sdds-footer-main-links">
+                <li><a (click)="removeFocus($event);">Link</a></li>
+                <li><a (click)="removeFocus($event);">Link</a></li>
+                <li><a (click)="removeFocus($event);">Link</a></li>
+                <li><a (click)="removeFocus($event);">Link</a></li>
+                <li><a (click)="removeFocus($event);">Link</a></li>
             </ul>
         </div>
 
         <div class="sdds-footer-top-col sdds-col-max sdds-col-xxlg sdds-col-xlg sdds-col-lg sdds-col-md-12 sdds-col-sm-12 sdds-col-xs-12">
-            <div class="sdds-footer-title">
+          <div (click)="toggleFooterColumn(3); $event.stopPropagation();" [ngClass]="{'opened': this.toggle[1]}" class="sdds-footer-title">
               <span>Title</span>
               <button class="sdds-footer-top-icon">
                 <svg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'>
@@ -66,12 +66,12 @@
                 </svg>
               </button>
             </div>
-            <ul class="sdds-footer-main-links">
-                <li><a>Link</a></li>
-                <li><a>Link</a></li>
-                <li><a>Link</a></li>
-                <li><a>Link</a></li>
-                <li><a>Link</a></li>
+            <ul [ngClass]="{'opened': this.toggle[3]}" class="sdds-footer-main-links">
+                <li><a (click)="removeFocus($event);">Link</a></li>
+                <li><a (click)="removeFocus($event);">Link</a></li>
+                <li><a (click)="removeFocus($event);">Link</a></li>
+                <li><a (click)="removeFocus($event);">Link</a></li>
+                <li><a (click)="removeFocus($event);">Link</a></li>
             </ul>
         </div>
 
@@ -84,7 +84,7 @@
       </ul>      
       <div class="sdds-footer-main-brand">
         <p>
-            © Copyright Scania 2021 All rights reserved.
+            © Copyright Scania 2022 All rights reserved.
         </p>
       </div>
     </div>

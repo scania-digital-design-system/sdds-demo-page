@@ -1,3 +1,7 @@
 node_modules/
+<<<<<<< HEAD
 sdds-demo-page/cypress/integration/2-advanced-examples/
 sdds-demo-page/cypress/integration/1-getting-started/
+=======
+.DS_Store
+>>>>>>> 971f1d3a5234e232970f39119cd9bd24db7469d3

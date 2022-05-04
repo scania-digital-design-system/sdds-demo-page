@@ -5,6 +5,7 @@
 .sdds-container.landing-page {
     background-color: var(--sdds-grey-50);
     padding-top: 72px;    
+    margin-left: 0;
 }
 
 
@@ -59,6 +60,16 @@
 
 .toast-row {
     margin-bottom: 50px;
+    
+    pointer-events: none;
+    opacity: 0;
+    transition-duration: 0.2s;
+
+    &.show {
+        pointer-events: initial;
+        opacity: 1;
+    }
+
 
     > * {
         display: flex;

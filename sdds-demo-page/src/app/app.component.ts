@@ -37,5 +37,8 @@ export class AppComponent implements OnInit {
 
   onCloseBanner() {
     this.hideBanner = true;
+    
+    // hack to refresh tooltips positions
+    window.scrollTo(0, 1);
   }
 }

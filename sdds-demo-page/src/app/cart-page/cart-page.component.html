@@ -111,17 +111,17 @@
             <div class="form-part">
                 <h3>Shipping address</h3>
 
-                <sdds-textfield type="text" placeholder="First name"></sdds-textfield>
-                <sdds-textfield type="text" placeholder="Last name"></sdds-textfield>
-                <sdds-textfield type="text" placeholder="Address"></sdds-textfield>
+                <sdds-textfield type="text" placeholder="First name" id="shipping-first-name"></sdds-textfield>
+                <sdds-textfield type="text" placeholder="Last name" id="shipping-last-name"></sdds-textfield>
+                <sdds-textfield type="text" placeholder="Address" id="shipping-address"></sdds-textfield>
                 <div class="textfield-row">
-                    <sdds-textfield type="text" placeholder="Postal code"></sdds-textfield>
-                    <sdds-textfield type="text" placeholder="City"></sdds-textfield>
+                    <sdds-textfield type="text" placeholder="Postal code" id="shipping-zip"></sdds-textfield>
+                    <sdds-textfield type="text" placeholder="City" id="shipping-city"></sdds-textfield>
                 </div>
-                <sdds-dropdown placeholder="Country">
-                    <sdds-dropdown-option value="option-1">Sweden</sdds-dropdown-option>
-                    <sdds-dropdown-option value="option-2">Norway</sdds-dropdown-option>
-                    <sdds-dropdown-option value="option-3">India</sdds-dropdown-option>
+                <sdds-dropdown placeholder="Country" id="shipping-country">
+                    <sdds-dropdown-option value="option-1" id="shipping-country-1">Sweden</sdds-dropdown-option>
+                    <sdds-dropdown-option value="option-2" id="shipping-country-2">Norway</sdds-dropdown-option>
+                    <sdds-dropdown-option value="option-3" id="shipping-country-3">India</sdds-dropdown-option>
                 </sdds-dropdown>
             </div>
 
@@ -149,7 +149,7 @@
                      </label>
                 </div>
 
-                <button class="sdds-btn sdds-btn-primary sdds-btn-fullbleed">
+                <button class="sdds-btn sdds-btn-primary sdds-btn-fullbleed" data-cy="submit">
                     Add to cart
                 </button>
             </div>

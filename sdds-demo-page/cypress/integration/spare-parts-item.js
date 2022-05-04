@@ -21,8 +21,7 @@ describe('spare parts shop demo page', () => {
       cy.get('.sdds-banner a')
         .should('contain', 'Deliveries & returns')
         .click()
-
-      newPageAssertion('/deliveries', 'Deliveries & returns')
+      cy.assertPage('/deliveries', 'Deliveries & returns')
       cy.activeMenuItem()
     })
     it('Banner closes when user clicks cross', () => {
@@ -53,7 +52,7 @@ describe('spare parts shop demo page', () => {
     it('Top footer content', () => {
       // Top footer features 4 sections with 5 links each = 20 links
       // All links read 'Nothing' except link to 'Deliveries & returns'
-      cy.topFooter(4, 20, ['Nothing', 'Deliveries & returns'])
+      cy.topFooter(4, 20, ['Link', 'Deliveries & returns'])
     })
 
     it('Main footer content', () => {
@@ -77,8 +76,7 @@ describe('spare parts shop demo page', () => {
     })
     it('shows a badge when item is added to cart', () => {
       cy.addToCart()
-      cy.get('sdds-badges').should('have.value', 1) 
-      //TODO: Best way to target badge element?
+      cy.checkHeader('My application', 1)
     })
     it('cart has a tooltip when hovered', () => {
       cy.get('[data-cy="go-to-cart"]').trigger('mouseover')
@@ -86,13 +84,13 @@ describe('spare parts shop demo page', () => {
     })
     it('shows a toast when item is added to cart', () => {
       cy.addToCart()
-      cy.get('.sdds-toast').should('be.visible')
+      cy.get('.sdds-toast-success').should('be.visible')
     })
     it('toast has link to cart', () => {
       cy.addToCart()
-      cy.get('.sdds-toast')
-      cy.get('.sdds-toast a').should('have.attr', 'href', '/cart').click()
-      newPageAssertion('/cart', 'My Cart')
+      cy.get('.sdds-toast-success')
+      cy.get('.sdds-toast-success a').should('have.attr', 'href', '/cart').click()
+      cy.assertPage('/cart', 'My Cart')
       cy.activeMenuItem()
     })
     it('toast can be closed', () => {
@@ -100,8 +98,7 @@ describe('spare parts shop demo page', () => {
       cy.close('.sdds-toast-dismiss')
       cy.get('.sdds-toast').should('not.be.visible')
     })
-    // Not sure this function will be implemented
-    it.skip('toast expires after 5 seconds', () => {
+    it('toast expires after 5 seconds', () => {
       cy.addToCart()
       cy.wait(5000)
       cy.get('.sdds-toast').should('not.be.visible')

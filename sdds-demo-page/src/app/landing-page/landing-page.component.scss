@@ -59,11 +59,12 @@
 }
 
 .toast-row {
-    margin-bottom: 50px;
-    
+    margin-bottom: 50px;    
     pointer-events: none;
     opacity: 0;
     transition-duration: 0.2s;
+    position: relative;
+    z-index: 200;
 
     &.show {
         pointer-events: initial;

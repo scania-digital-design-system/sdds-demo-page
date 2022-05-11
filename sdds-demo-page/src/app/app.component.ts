@@ -11,7 +11,7 @@ import { AppState } from './store/models/state.model';*/
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  hideBanner = false
+  // hideBanner = false
   mobileMenuOpen = false
 
   constructor(private router: Router) {
@@ -34,10 +34,10 @@ export class AppComponent implements OnInit {
     }
   }
 
-  onCloseBanner() {
+  /*onCloseBanner() {
     this.hideBanner = true;
     
     // hack to refresh tooltips positions
     window.scrollTo(0, 1);
-  }
+  }*/
 }

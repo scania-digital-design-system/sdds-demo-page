@@ -1,3 +1,21 @@
+<div [ngClass]="{'hide-banner': hideBanner}" class="sdds-banner">
+    <span class="sdds-banner-prefix">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.008 2.50195C5.85715 2.50195 2.49219 5.86691 2.49219 10.0178C2.49219 14.1687 5.85715 17.5337 10.008 17.5337C14.1589 17.5337 17.5239 14.1687 17.5239 10.0178C17.5239 5.86691 14.1589 2.50195 10.008 2.50195ZM1.24219 10.0178C1.24219 5.17656 5.16679 1.25195 10.008 1.25195C14.8493 1.25195 18.7739 5.17656 18.7739 10.0178C18.7739 14.8591 14.8493 18.7837 10.008 18.7837C5.16679 18.7837 1.24219 14.8591 1.24219 10.0178Z" fill="#2B70D3"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0156 8.82812C10.3608 8.82812 10.6406 9.10795 10.6406 9.45312L10.6406 12.9628C10.6406 13.3079 10.3608 13.5878 10.0156 13.5878C9.67045 13.5878 9.39063 13.3079 9.39063 12.9628L9.39063 9.45312C9.39063 9.10795 9.67045 8.82812 10.0156 8.82812Z" fill="#2B70D3"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0156 6.44727C10.3608 6.44727 10.6406 6.72709 10.6406 7.07227L10.6406 7.20796C10.6406 7.55313 10.3608 7.83296 10.0156 7.83296C9.67045 7.83296 9.39062 7.55313 9.39062 7.20796L9.39062 7.07227C9.39062 6.72709 9.67045 6.44727 10.0156 6.44727Z" fill="#2B70D3"/>
+        </svg>            
+    </span>
+  
+    <div class="sdds-banner-body">
+        <h6 class="sdds-banner-header">Order time longer on some products </h6>
+        <div class="sdds-banner-subheader">Read more about delivery and order times in the link below.</div>
+        <a class="sdds-link sdds-banner-link" [routerLink]="'/deliveries'" href="#">Deliveries & returns</a>
+    </div>
+  
+    <div (click)="onCloseBanner()" class="sdds-banner-close"></div>
+</div>  
+
 <nav class="sdds-nav">
     <div class="sdds-nav__left">
         <button (click)="openMobileMenu()" class="sdds-nav__mob-menu-btn">

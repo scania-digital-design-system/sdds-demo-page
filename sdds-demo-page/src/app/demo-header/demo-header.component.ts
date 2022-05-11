@@ -14,6 +14,7 @@ import { AddItemAction } from '../store/actions/cart.action';
   styleUrls: ['./demo-header.component.scss']
 })
 export class DemoHeaderComponent implements OnInit {
+  hideBanner = false
   showBadge = false;
   cartItems$: Observable<Array<CartItem>>;
   @Output() eventFromHeader = new EventEmitter<any>();
@@ -34,4 +35,11 @@ export class DemoHeaderComponent implements OnInit {
     });
   }
 
+  onCloseBanner() {
+    console.log('close banner?');
+    this.hideBanner = true;
+    
+    // hack to refresh tooltips positions
+    window.scrollTo(0, 1);
+  }
 }

@@ -4,7 +4,7 @@
 
 .sdds-container.landing-page {
     background-color: var(--sdds-grey-50);
-    padding-top: 72px;    
+    padding-top: 26px;    
     margin-left: 0;
 }
 
@@ -14,7 +14,7 @@
 }
 
 .product-row {
-    margin-bottom: 42px;
+    margin-bottom: 104px;
     position: relative;
 
     > * {
@@ -59,7 +59,6 @@
 }
 
 .toast-row {
-    margin-bottom: 50px;    
     pointer-events: none;
     opacity: 0;
     transition-duration: 0.2s;
@@ -91,5 +90,13 @@
 }
 
 .related-row {
-    padding-bottom: 103px;
+    padding-bottom: 104px;
+
+    h3 {
+        @include type-style('headline-05');
+        padding-bottom: 16px;
+        border-bottom: 1px solid #DBDFE6;
+        width: 100%;
+        margin-bottom: 32px;
+    }
 }

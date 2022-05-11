@@ -10,6 +10,7 @@ import { AppState } from '../store/models/state.model';
 })
 export class LandingPageComponent implements OnInit {
   showToast = false
+  toastTimeoutHandle = null
 
   constructor(private store: Store<AppState>) { }
 
@@ -17,8 +18,14 @@ export class LandingPageComponent implements OnInit {
 
   addToCart(): void {
     this.showToast = true;
-    setTimeout(
+
+    if(this.toastTimeoutHandle) {
+      clearTimeout(this.toastTimeoutHandle);
+    }
+
+    this.toastTimeoutHandle = setTimeout(
       () => {
+        this.toastTimeoutHandle = null;
         this.showToast = false;
       }, 5000
     );

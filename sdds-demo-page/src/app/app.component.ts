@@ -20,8 +20,10 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.router.events.subscribe((evt) => {
+      console.log('router event?');
       if (evt instanceof NavigationEnd) {
-        window.scrollTo(0, 0);
+        const mainContentEl = document.querySelector('main-content');
+        mainContentEl && mainContentEl.scrollTo(0, 0);
       }
     });
   }

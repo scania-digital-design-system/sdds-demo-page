@@ -16,6 +16,10 @@
 nav {
     background-color: var(--sdds-blue-900);
 
+    .sdds-nav__app-name {
+        text-decoration: none;
+    }
+
     .sdds-nav__item {
         background-color: var(--sdds-blue-900);
         position: relative;

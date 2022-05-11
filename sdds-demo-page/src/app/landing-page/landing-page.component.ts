@@ -40,6 +40,7 @@ export class LandingPageComponent implements OnInit {
 
   closeToast(): void {
     this.showToast = false;
+    this.toastTimeoutHandle = null;
   }
 
 }

@@ -13,6 +13,9 @@ import { DemoFooterComponent } from './demo-footer/demo-footer.component';
 
 import { CartReducer } from './store/reducers/cart.reducer';
 
+// added ShareButtonModule
+import { ShareButtonModule } from 'ngx-sharebuttons/button';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,9 +25,12 @@ import { CartReducer } from './store/reducers/cart.reducer';
     LandingPageComponent,
     CartPageComponent,
     DeliveriesPageComponent,
-    DemoFooterComponent
+    DemoFooterComponent,    
   ],
   imports: [
+    // added ShareButtonModule
+    ShareButtonModule,
+
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({

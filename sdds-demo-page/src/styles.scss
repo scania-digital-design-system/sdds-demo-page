@@ -2,6 +2,9 @@
 @import '@scania/typography/dist/scss/tokens';
 @import '@scania/grid/dist/scss/grid.scss';
 
+// added ShareButtonModule
+@import '~ngx-sharebuttons/themes/default';
+
 /* reset */
 h1, h2, h3, h4, h5, p {
     padding-top: 0;

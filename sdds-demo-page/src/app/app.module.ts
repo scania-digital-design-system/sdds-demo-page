@@ -15,7 +15,6 @@ import { CartReducer } from './store/reducers/cart.reducer';
 
 // added ShareButtonModule
 import { ShareButtonModule } from 'ngx-sharebuttons/button';
-// import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 
 @NgModule({

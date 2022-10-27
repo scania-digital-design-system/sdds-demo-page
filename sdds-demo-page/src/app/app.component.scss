@@ -1,12 +1,15 @@
 @import '@scania/typography/dist/scss/mixins';
 @import '@scania/typography/dist/scss/tokens';
-@import '@scania/grid/dist/scss/grid.scss';
 
 :host {
+    background-color: var(--sdds-grey-50);
     @include type-style('body-01');
-    overflow-x: hidden;
+    overflow: hidden;
     position: relative;
-    height: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-flow: column;
 }
 
 main {
@@ -14,8 +17,11 @@ main {
     flex-wrap: nowrap;
 }
 
-.sdds-banner {
-    &.hide-banner {
-        display: none;
-    }
+.sdds-container {
+    max-width: initial;
+}
+
+.sdds-push {
+    // height: 100%;
+    overflow: hidden;
 }

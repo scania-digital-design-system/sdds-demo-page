@@ -1,0 +1,35 @@
+@import '@scania/typography/dist/scss/mixins';
+@import '@scania/typography/dist/scss/tokens';
+@import '@scania/grid/dist/scss/grid.scss';
+
+.sdds-container.deliveries-page {
+    background-color: var(--sdds-grey-50);
+    padding-top: 72px;
+    margin-left: 0;
+
+    h2 {
+        @include type-style('headline-03');
+        margin-bottom: 32px;
+    }
+
+    .divider-line {
+        border-top: 1px solid #DBDFE6;
+        margin-bottom: 32px;
+    }
+
+    p {
+        @include type-style('body-01');
+        opacity: 0.6;
+        margin-bottom: 72px;
+    }
+
+    .table-col {
+        margin-bottom: 64px;
+
+        table {
+            width: 100%;
+        }
+    }
+
+    
+}

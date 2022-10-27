@@ -1,4 +1,12 @@
 import { Component, Output, EventEmitter, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { ActionsSubject } from '@ngrx/store';
+import { CartItem } from '../store/models/cartItem.model';
+import { AppState } from '../store/models/state.model';
+
+import { createSelector } from '@ngrx/store';
+import { AddItemAction } from '../store/actions/cart.action';
 
 @Component({
   selector: 'demo-header',
@@ -6,10 +14,13 @@ import { Component, Output, EventEmitter, OnInit } from '@angular/core';
   styleUrls: ['./demo-header.component.scss']
 })
 export class DemoHeaderComponent implements OnInit {
+  hideBanner = false
   showBadge = false;
+  cartItems$: Observable<Array<CartItem>>;
   @Output() eventFromHeader = new EventEmitter<any>();
 
-  constructor() { }
+  constructor(private store: Store<AppState>, private actionListener$: ActionsSubject) {
+  }
 
   openMobileMenu(): void {
     this.eventFromHeader.emit({
@@ -18,7 +29,17 @@ export class DemoHeaderComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.store.select((store) => store.cartItems).subscribe(cartItems => {
+      this.showBadge = cartItems.length > 0;
+    });
   }
 
+  onCloseBanner() {
+    console.log('close banner?');
+    this.hideBanner = true;
+    
+    // hack to refresh tooltips positions
+    window.scrollTo(0, 1);
+  }
 }

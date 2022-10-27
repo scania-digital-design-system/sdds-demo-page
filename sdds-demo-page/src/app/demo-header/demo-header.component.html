@@ -1,3 +1,21 @@
+<div [ngClass]="{'hide-banner': hideBanner}" class="sdds-banner">
+    <span class="sdds-banner-prefix">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.008 2.50195C5.85715 2.50195 2.49219 5.86691 2.49219 10.0178C2.49219 14.1687 5.85715 17.5337 10.008 17.5337C14.1589 17.5337 17.5239 14.1687 17.5239 10.0178C17.5239 5.86691 14.1589 2.50195 10.008 2.50195ZM1.24219 10.0178C1.24219 5.17656 5.16679 1.25195 10.008 1.25195C14.8493 1.25195 18.7739 5.17656 18.7739 10.0178C18.7739 14.8591 14.8493 18.7837 10.008 18.7837C5.16679 18.7837 1.24219 14.8591 1.24219 10.0178Z" fill="#2B70D3"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0156 8.82812C10.3608 8.82812 10.6406 9.10795 10.6406 9.45312L10.6406 12.9628C10.6406 13.3079 10.3608 13.5878 10.0156 13.5878C9.67045 13.5878 9.39063 13.3079 9.39063 12.9628L9.39063 9.45312C9.39063 9.10795 9.67045 8.82812 10.0156 8.82812Z" fill="#2B70D3"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0156 6.44727C10.3608 6.44727 10.6406 6.72709 10.6406 7.07227L10.6406 7.20796C10.6406 7.55313 10.3608 7.83296 10.0156 7.83296C9.67045 7.83296 9.39062 7.55313 9.39062 7.20796L9.39062 7.07227C9.39062 6.72709 9.67045 6.44727 10.0156 6.44727Z" fill="#2B70D3"/>
+        </svg>            
+    </span>
+  
+    <div class="sdds-banner-body">
+        <h6 class="sdds-banner-header">Order time longer on some products </h6>
+        <div class="sdds-banner-subheader">Read more about delivery and order times in the link below.</div>
+        <a class="sdds-link sdds-banner-link" [routerLink]="'/deliveries'" href="#">Deliveries & returns</a>
+    </div>
+  
+    <div (click)="onCloseBanner()" class="sdds-banner-close"></div>
+</div>  
+
 <nav class="sdds-nav">
     <div class="sdds-nav__left">
         <button (click)="openMobileMenu()" class="sdds-nav__mob-menu-btn">
@@ -11,18 +29,23 @@
             </svg>
         </button>
 
-        <div class="sdds-nav__app-name">My application</div>
+        <a href="/" class="sdds-nav__app-name">
+            My application
+        </a>
     </div>
     <div class="sdds-nav__right">
 
-        <a class="sdds-nav__item" href="#">
+        <a id="example-btn" [routerLink]="'/cart'" class="sdds-nav__item">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.48247 13.0349C6.5791 13.5812 7.05348 13.9792 7.60777 13.9792H15.4154C15.9573 13.9792 16.4247 13.5983 16.5345 13.0673L17.7597 7.14105C17.9064 6.43128 17.3649 5.76567 16.6406 5.76567L7.47386 5.76567C7.13814 5.76567 6.86598 5.49331 6.86598 5.15734C6.86598 4.82137 7.13814 4.54901 7.47386 4.54901L16.6406 4.549C18.1353 4.549 19.2531 5.92271 18.9502 7.38755L17.7251 13.3138C17.4985 14.4098 16.5338 15.1959 15.4154 15.1959H7.60777C6.46381 15.1959 5.48477 14.3744 5.28534 13.2471L3.50094 3.16095C3.40431 2.61473 2.92993 2.21667 2.37564 2.21667L1.60787 2.21667C1.27215 2.21667 1 1.94431 1 1.60834C1 1.27236 1.27215 1 1.60787 1L2.37564 1C3.5196 1 4.49863 1.82154 4.69807 2.94884L6.48247 13.0349Z" fill="#F9FAFB"/>
                 <path d="M7.78161 17.7833C7.78161 18.4553 8.32592 19 8.99736 19C9.6688 19 10.2131 18.4553 10.2131 17.7833C10.2131 17.1114 9.6688 16.5666 8.99736 16.5666C8.32592 16.5666 7.78161 17.1114 7.78161 17.7833Z" fill="#F9FAFB"/>
                 <path d="M12.9806 17.7833C12.9806 18.4553 13.5249 19 14.1963 19C14.8677 19 15.4121 18.4553 15.4121 17.7833C15.4121 17.1114 14.8677 16.5667 14.1963 16.5667C13.5249 16.5667 12.9806 17.1114 12.9806 17.7833Z" fill="#F9FAFB"/>
             </svg>
 
-            <sdds-badges *ngIf="showBadge" value="1"></sdds-badges>
+            <sdds-badges *ngIf="this.showBadge" value="1"></sdds-badges>
+
+            <sdds-tooltip placement="bottom" selector="#example-btn" text="Cart" ></sdds-tooltip>
+
         </a>
 
         <a class="sdds-nav__item" href="#">

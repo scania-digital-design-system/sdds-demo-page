@@ -1,5 +1,24 @@
+/*:host {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}*/
+
+.sdds-banner {
+    background-color: var(--sdds-grey-300);
+
+    &.hide-banner {
+        display: none;
+    }
+}
+
 nav {
     background-color: var(--sdds-blue-900);
+
+    .sdds-nav__app-name {
+        text-decoration: none;
+    }
 
     .sdds-nav__item {
         background-color: var(--sdds-blue-900);

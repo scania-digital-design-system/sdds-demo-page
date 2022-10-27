@@ -3,8 +3,10 @@
 @import '@scania/grid/dist/scss/grid.scss';
 
 .sdds-container.cart-page {
-    background-color: #f8f9fa;
+    background-color: var(--sdds-grey-50);
     padding-top: 72px;
+    margin-left: 0;
+    padding-bottom: 104px;
 }
 
 .product-details-row {    
@@ -22,7 +24,11 @@
 
 h2 {
     @include type-style('headline-03');
-    margin-bottom: 64px;
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #DBDFE6;
+
+
 }
 
 img {
@@ -34,7 +40,7 @@ img {
 }
 
 .product-details-col {
-    padding-top: 24px;
+    // padding-top: 24px;
     position: relative;
 }
 
@@ -72,6 +78,10 @@ span {
 p {
     @include type-style('body-01');
     margin-bottom: 32px;
+
+    a {
+        color: inherit;
+    }
 }
 
 .order-rows-row {
@@ -88,9 +98,8 @@ p {
     padding-bottom: 24px;
 
     span {
-        &.result {
-            @include type-style('headline-03');
-            color: var(--sdds-grey-958);
+        &.black {
+            color: #000;
         }
 
         &:nth-child(2) {
@@ -100,8 +109,16 @@ p {
 }
 
 .form-part {
-    margin-bottom: 104px;
+    margin-bottom: 72px;
     position: relative;
+
+    sdds-textfield {
+        outline: none !important;
+    }
+
+    sdds-dropdown {
+        outline: none !important;
+    }
 
     .divider-line {
         border-top: 1px solid #DBDFE6;
@@ -158,11 +175,25 @@ p {
        
         > * {
             width: 100%;
+            margin-right: 12px;
+            margin-left: 12px;
         }
 
         > :first-child {
-            width: 42%;
-            margin-right: 24px;
-        }        
+            margin-left: 0;
+        }
+
+        > :last-child {
+            margin-right: 0;
+        }
+    }
+
+    button {
+        max-width: 100px;
+        margin-bottom: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
     }
 }

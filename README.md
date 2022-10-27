@@ -1,4 +1,12 @@
-# sdds-demo-angular-page
-Angular demo page showcasing some components in a "real" scenario
+- Demo page built on angular and using SDDS components, with very little or no modifications.
 
-Link to hosted site: <a href="https://sdds-angular-demo.netlify.app/">Angular Based Demo Page with Tegel components</a>
+- Uses angular routing for routing
+- Uses ngrx for app state management.
+- Not entirely built for mobile, might be updated with the design in the future.
+
+1. Use a recent version of node (I use 16)
+2. npm install
+3. npm run start
+
+based on this design:
+https://www.figma.com/file/I60Tr7x2OyGh1dKqZc6E35/Exploration#182371135
